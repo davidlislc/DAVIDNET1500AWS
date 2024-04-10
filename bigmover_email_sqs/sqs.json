@@ -1,0 +1,74 @@
+[
+    {
+        "ticker": "MRNA.O",
+        "symbolDesc": "Moderna Inc",
+        "priceChange": 6.1947,
+        "datetime": "23:59:50.000"
+    },
+    {
+        "ticker": "FMC",
+        "symbolDesc": "FMC Corp",
+        "priceChange": 6.0193,
+        "datetime": "23:58:34.000"
+    },
+    {
+        "ticker": "ENPH.O",
+        "symbolDesc": "Enphase Energy Inc",
+        "priceChange": 5.8487,
+        "datetime": "23:59:59.000"
+    },
+    {
+        "ticker": "PODD.O",
+        "symbolDesc": "Insulet Corp",
+        "priceChange": 4.6871,
+        "datetime": "23:50:14.000"
+    },
+    {
+        "ticker": "TECH.O",
+        "symbolDesc": "Bio-Techne Corp",
+        "priceChange": 4.4122,
+        "datetime": "21:49:47.000"
+    },
+    {
+        "ticker": "RVTY.K",
+        "symbolDesc": "Revvity Inc",
+        "priceChange": 4.0504,
+        "datetime": "23:00:00.000"
+    },
+    {
+        "ticker": "BIO",
+        "symbolDesc": "Bio Rad Laboratories Inc",
+        "priceChange": 4.0329,
+        "datetime": "23:00:00.000"
+    },
+    {
+        "ticker": "PANW.O",
+        "symbolDesc": "Palo Alto Networks Inc",
+        "priceChange": 3.9281,
+        "datetime": "23:59:28.000"
+    },
+    {
+        "ticker": "ETSY.O",
+        "symbolDesc": "ETSY Inc",
+        "priceChange": 3.888,
+        "datetime": "23:59:29.000"
+    },
+    {
+        "ticker": "ADI.O",
+        "symbolDesc": "Analog Devices Inc",
+        "priceChange": 3.7775,
+        "datetime": "23:39:10.000"
+    },
+    {
+        "ticker": "APTV.K",
+        "symbolDesc": "Aptiv PLC",
+        "priceChange": 3.7597,
+        "datetime": "23:57:31.000"
+    },
+    {
+        "ticker": "CSCO.O",
+        "symbolDesc": "Cisco Systems Inc",
+        "priceChange": 3.6692,
+        "datetime": "23:59:51.000"
+    }
+]

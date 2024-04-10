@@ -14,7 +14,7 @@ export const handler = async (event) => {
       console.log(tops[i])
       const data = {
         
-        ticker: tops[i].vendorSymbol,
+        ticker: tops[i].cnbcSymbol,
         symbolDesc: tops[i].symbolDesc,
         priceChange: tops[i].symbolData.changePct,
         datetime: tops[i].symbolData.lastTime
