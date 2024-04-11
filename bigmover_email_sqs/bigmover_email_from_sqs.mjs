@@ -7,7 +7,6 @@ const ses = new SESClient({ region: "us-east-2" });
 export const handler = async (event) => {
   try {
     const queueUrl = "https://sqs.us-east-2.amazonaws.com/873996336316/david-net1500-bigmover";
-
     const params = {
       QueueUrl: queueUrl,
       MaxNumberOfMessages: 10, // Maximum number of messages to retrieve
@@ -28,35 +27,34 @@ export const handler = async (event) => {
     console.log("Received message handle :" + messages[0].ReceiptHandle)
 
     const stockArray = JSON.parse(stocks)
-    let emailbody=""
+    let emailbody = "<h2>Hi, here are the top movers today</h2>";
+    emailbody += "<ul>";
     for (let i = 0; i < stockArray.length; i++) {
-      emailbody += JSON.stringify(stockArray[i].ticker) + ": "+
-                   JSON.stringify(stockArray[i].priceChange) +
-                    "\n" 
+      emailbody += "<li>" + JSON.stringify(stockArray[i].ticker) + ": " +
+        JSON.stringify(stockArray[i].priceChange) +
+        "%</li>";
     }
+    emailbody += "</ul>";
     const command = new SendEmailCommand({
       Destination: {
         ToAddresses: ["dli@indianatech.edu"],
       },
       Message: {
         Body: {
-          Text: { Data: emailbody },
+          Html: { Data: emailbody },
         },
-
         Subject: { Data: "Top movers today" },
       },
       Source: "dli@indianatech.edu",
     });
     let response = await ses.send(command);
-    console.log(response);
 
     const deleteParams = {
       QueueUrl: "https://sqs.us-east-2.amazonaws.com/873996336316/david-net1500-bigmover",
       ReceiptHandle: messages[0].ReceiptHandle,
     };
     const deleteResults = await sqsClient.send(new DeleteMessageCommand(deleteParams));
-    console.log(deleteResults);
-    console.log("Message retrieval done");
+    console.log("Message sent");
     return {
       statusCode: 200,
       body: "Messages received successfully!",
